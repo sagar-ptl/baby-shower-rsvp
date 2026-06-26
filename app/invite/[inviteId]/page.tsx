@@ -21,6 +21,7 @@ export default async function InvitationPage({
   let invite = null;
   try {
     invite = await getInvite(inviteId);
+    console.log(invite);
   } catch {
     return (
 
