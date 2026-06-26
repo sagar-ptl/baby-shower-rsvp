@@ -10,98 +10,92 @@ type ParticleType =
   | "leaf"
   | "feather";
 
-const particleAssets = {
+interface ParticleData {
+  id: number;
+  type: ParticleType;
+  left: number;
+  duration: number;
+  delay: number;
+}
+
+const particleAssets: Record<ParticleType, string> = {
   flower: "🌸",
-  flower2:"🪷",
-  flower3:"🌻",
-  flower4:"🌼",
+  flower2: "🌺",
+  flower3: "🌼",
+  flower4: "💮",
   leaf: "🍃",
   feather: "🦚",
 };
 
-const particles = Array.from({ length: 20 }).map((_, i) => {
-  const types: ParticleType[] = [
-    "flower",
-    "flower2",
-    "flower3",
-    "flower4",
-    "leaf",
-    "feather",
-  ];
+const particleTypes: ParticleType[] = [
+  "flower",
+  "flower2",
+  "flower3",
+  "flower4",
+  "leaf",
+  "feather",
+];
 
-  const type =
-    types[Math.floor(Math.random() * types.length)];
-
-  return {
+const particles: ParticleData[] = Array.from(
+  { length: 20 },
+  (_, i) => ({
     id: i,
-    type,
+    type:
+      particleTypes[
+        Math.floor(Math.random() * particleTypes.length)
+      ],
     left: Math.random() * 100,
     duration: 18 + Math.random() * 12,
     delay: Math.random() * 8,
-    size: 32,
-
-    // Store original position for calculations
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-  };
-});
-
-type PointerPosition = {
-  x: number;
-  y: number;
-} | null;
+  })
+);
 
 function Particle({
-  particle
+  particle,
 }: {
-  particle: any;
-  pointer: PointerPosition;
+  particle: ParticleData;
 }) {
-  let offsetX = 0;
-  let offsetY = 0;
-
   return (
     <motion.div
-      className="absolute"
+      className="absolute pointer-events-none"
       style={{
         left: `${particle.left}%`,
         top: "-10%",
       }}
       animate={{
         y: ["0vh", "120vh"],
-        x: [offsetX],
+        x: [0, 20, -20, 0],
         rotate: [0, 180, 360],
       }}
       transition={{
-        x: {
-          type: "spring",
-          stiffness: 20,
-          damping: 25,
-        },
         y: {
           duration: particle.duration,
           delay: particle.delay,
           repeat: Infinity,
           ease: "linear",
         },
+        x: {
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
         rotate: {
-          duration: 2,
+          duration: 10,
           repeat: Infinity,
           ease: "linear",
         },
       }}
     >
-      <div className="text-4xl md:text-4xl font-bold">{particleAssets[particle.type]}</div>
+      <div className="text-3xl md:text-4xl select-none">
+        {particleAssets[particle.type]}
+      </div>
     </motion.div>
   );
 }
 
 export default function FloatingGarden() {
-
   return (
-    <div
-      className="fixed inset-0 overflow-hidden z-0"
-    >
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {particles.map((particle) => (
         <Particle
           key={particle.id}
