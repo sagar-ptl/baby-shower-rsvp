@@ -25,7 +25,7 @@ export default async function InvitationPage({
   } catch {
     console.log("Test Start");
     console.log(invite);
-    console.log("Test");
+    console.log("Test End");
     return (
 
       <div className="min-h-screen flex items-center justify-center">
@@ -124,22 +124,46 @@ md:w-96
 
           <div className="mt-6 space-y-3">
             <RevealCard>
-              <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
-                <p className="text-sm">Grandparents to be</p>
-                <p className="font-semibold">Bharat Patel & Vanita Patel</p>
-                <p className="font-semibold">Vasant Patel & Kailash Patel</p>
-              </div>
+              <div className="bg-[#FCFBF7]/25 text-[#2F342F] rounded-2xl shadow-sm p-5">
+              <p className="text-sm text-center tracking-widest mb-5">
+      Grandparents-to-Be
+    </p>
+
+    <div className="grid grid-cols-2 gap-6">
+
+      <div className="text-center">
+
+        <p className="font-semibold">
+          Bharat Patel
+        </p>
+
+        <p className="font-semibold">
+          Vanita Patel
+        </p>
+      </div>
+
+      <div className="text-center border-l border-[#D7D9CE] pl-6">
+        <p className="font-semibold">
+          Vasant Patel
+        </p>
+
+        <p className="font-semibold">
+          Kailash Patel
+        </p>
+      </div>
+      </div>
+      </div>
             </RevealCard>
             <RevealCard>
 
-              <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
+              <div className="bg-[#FCFBF7]/25 text-[#2F342F] rounded-2xl shadow-sm p-5">
                 <p className="text-sm">Date & Time</p>
                 <p className="font-semibold">Sunday, September 13th 2026</p>
                 <p className="font-semibold">10:00 AM</p>
               </div>
             </RevealCard>
             <RevealCard>
-              <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
+              <div className="bg-[#FCFBF7]/25 text-[#2F342F] rounded-2xl shadow-sm p-5">
                 <p className="text-sm">Venue</p>
                 <p className="font-semibold">
                   Red Roof Inn & Conference Center McKinney
