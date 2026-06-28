@@ -25,7 +25,7 @@ export default async function InvitationPage({
   } catch {
     console.log("Test Start");
     console.log(invite);
-    console.log("Test End");
+    console.log("Test");
     return (
 
       <div className="min-h-screen flex items-center justify-center">
