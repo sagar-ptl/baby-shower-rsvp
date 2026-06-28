@@ -124,6 +124,13 @@ md:w-96
 
           <div className="mt-6 space-y-3">
             <RevealCard>
+              <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
+                <p className="text-sm">Grandparents to be</p>
+                <p className="font-semibold">Bharat Patel & Vanita Patel</p>
+                <p className="font-semibold">Vasant Patel & Kailash Patel</p>
+              </div>
+            </RevealCard>
+            <RevealCard>
 
               <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
                 <p className="text-sm">Date & Time</p>
@@ -135,7 +142,10 @@ md:w-96
               <div className="bg-[#FCFBF7] text-[#2F342F] rounded-2xl shadow p-4">
                 <p className="text-sm">Venue</p>
                 <p className="font-semibold">
-                  123 Test St, McKinney, TX 75407
+                  Red Roof Inn & Conference Center McKinney
+                </p>
+                <p className="font-semibold">
+                  1300 N Central Expy, McKinney, TX 75070
                 </p>
               </div>
             </RevealCard>
