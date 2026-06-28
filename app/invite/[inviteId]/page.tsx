@@ -136,13 +136,12 @@ md:w-96
         <p className="font-semibold">
           Bharat Patel
         </p>
-
         <p className="font-semibold">
           Vanita Patel
         </p>
       </div>
 
-      <div className="text-center border-l border-[#D7D9CE] pl-6">
+      <div className="text-center">
         <p className="font-semibold">
           Vasant Patel
         </p>
