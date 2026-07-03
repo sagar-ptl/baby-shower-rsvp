@@ -45,7 +45,7 @@ export default async function InvitationPage({
   return (
      <InvitationShell>
       <FloatingGarden />
-    <main className="min-h-screen bg-[#F7F5EE] text-[#4F6F52] p-6 flex items-center justify-center text-center overflow-hidden z-0">
+    <main className="min-h-screen bg-[#B8E5B8] text-[#4F6F52] p-6 flex items-center justify-center text-center overflow-hidden z-0">
 <img
   src="/krishna-tree-left.png"
   alt=""
@@ -180,7 +180,9 @@ md:w-96
           <p className="mt-6 italic">
            🌿 No boxed gifts, please. 🌿
           </p>
-
+          <p className="mt-6 italic">
+           Kindly submit your RSVP by Friday, August 7th.
+          </p>
           <RSVPButton inviteId={inviteId} />
         </div>
 

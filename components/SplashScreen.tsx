@@ -53,7 +53,7 @@ export default function SplashScreen({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 5,
+            delay: 1.5,
             duration: 1,
           }}
           className="
@@ -71,7 +71,7 @@ export default function SplashScreen({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 5.8,
+            delay: 1.7,
             duration: 1,
           }}
           className="
@@ -83,7 +83,13 @@ export default function SplashScreen({
           Mohini & Sagar
         </motion.p>
 
-        <button
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 1.7,
+            duration: 1,
+          }}
           onClick={onEnter}
           className="
             mt-10
@@ -96,7 +102,7 @@ export default function SplashScreen({
           "
         >
           ✨ Open Invitation
-        </button>
+        </motion.button>
       </div>
     </div>
   );

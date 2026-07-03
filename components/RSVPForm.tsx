@@ -138,7 +138,7 @@ export default function RSVPForm({
   }
 
   return (
-    <div className="min-h-screen bg-[#F7F5EE] text-[#4F6F52] p-6">
+    <div className="min-h-screen bg-[#B8E5B8] text-[#4F6F52] p-6">
       <div className="rounded-2xl shadow p-4 mb-3">
         <h1 className="text-xl font-semibold mb-6">
           {invite.household}

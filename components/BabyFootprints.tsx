@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const footprints = [
   {
-    left: "45%",
+    left: "42%",
     top: "80%",
     image: "/icons/baby-foot-pink.png",
     rotate: 0,
     delay: 0,
   },
   {
-    left: "55%",
+    left: "57%",
     top: "73%",
     image: "/icons/baby-foot-blue.png",
     rotate: 0,
@@ -20,14 +20,14 @@ const footprints = [
   },
 
   {
-    left: "45%",
+    left: "42%",
     top: "65%",
     image: "/icons/baby-foot-pink.png",
     rotate: 0,
     delay: 1,
   },
   {
-    left: "55%",
+    left: "57%",
     top: "58%",
     image: "/icons/baby-foot-blue.png",
     rotate: 0,
@@ -35,14 +35,14 @@ const footprints = [
   },
 
   {
-    left: "45%",
+    left: "42%",
     top: "50%",
     image: "/icons/baby-foot-pink.png",
     rotate: 0,
     delay: 2,
   },
   {
-    left: "55%",
+    left: "57%",
     top: "42%",
     image: "/icons/baby-foot-blue.png",
     rotate: 0,
@@ -50,7 +50,7 @@ const footprints = [
   },
 
   {
-    left: "45%",
+    left: "42%",
     top: "32%",
     image: "/icons/baby-foot-pink.png",
     rotate: 0,
@@ -58,7 +58,7 @@ const footprints = [
   },
 
   {
-    left: "55%",
+    left: "57%",
     top: "22%",
     image: "/icons/baby-foot-blue.png",
     rotate: 0,
